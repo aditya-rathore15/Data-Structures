@@ -1,7 +1,7 @@
 package Trees;
 
 //Tree traversal is the process of visiting each node exactly once.
-public class TreeTraversals {
+public class DFSTreeTraversals {
 
     // Inorder : Left -> Root -> Right
     // For BST, this gives sorted order!
