@@ -1,25 +1,25 @@
 package linkedlist;
 
 public class LinkedList {
-    private Node head;
+    private ListNode head;
 
     public void insertAtBeginning(int data) {
         if (head == null) {
-            head = new Node(data);
+            head = new ListNode(data);
         }
 
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
         newNode.next = head;
         head = newNode;
     }
 
     public void insertAtEnd(int data) {
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
         if (head == null) {
             head = newNode;
         }
 
-        Node current = head;
+        ListNode current = head;
         while(current.next != null) {
             current = current.next;
         }
@@ -32,8 +32,8 @@ public class LinkedList {
             insertAtBeginning(data);
         }
 
-        Node newNode = new Node(data);
-        Node current = head;
+        ListNode newNode = new ListNode(data);
+        ListNode current = head;
 
         while(position > 0) {
             current = current.next;
@@ -58,7 +58,7 @@ public class LinkedList {
 
         if (head.next == null) return;
 
-        Node current = head;
+        ListNode current = head;
 
         while(current.next.next != null) {
             current = current.next;
@@ -75,7 +75,7 @@ public class LinkedList {
             return;
         }
 
-        Node current = head;
+        ListNode current = head;
 
         while(current.next != null && current.next.data != value) {
             current = current.next;
@@ -87,7 +87,7 @@ public class LinkedList {
     }
 
     public boolean search(int value) {
-        Node current = head;
+        ListNode current = head;
 
         while(current != null) {
             if(current.data == value) return true;
@@ -97,7 +97,7 @@ public class LinkedList {
     }
 
     public void display() {
-        Node current = head;
+        ListNode current = head;
 
         while(current != null) {
             System.out.println(current.data + " -> ");
@@ -107,9 +107,9 @@ public class LinkedList {
     }
 
     public void reverse() {
-        Node prev = null;
-        Node current = head;
-        Node next = null;
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = null;
 
         while (current != null) {
             next = current.next;

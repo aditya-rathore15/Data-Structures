@@ -1,8 +1,8 @@
 package linkedlist;
 
 public class RemoveDuplicates {
-    public Node removeDuplicate(Node head) {
-        Node current =  head;
+    public ListNode removeDuplicate(ListNode head) {
+        ListNode current =  head;
 
         while(current != null && current.next != null) {
             if(current.data == current.next.data) {

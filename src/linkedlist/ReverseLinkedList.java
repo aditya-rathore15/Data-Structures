@@ -7,12 +7,12 @@ Time: O(n)
 Space: O(1)
  */
 public class ReverseLinkedList {
-    public Node reverseList(Node head) {
-        Node previous = null;
-        Node current = head;
+    public ListNode reverseList(ListNode head) {
+        ListNode previous = null;
+        ListNode current = head;
 
         while(current != null) {
-            Node next = current.next;
+            ListNode next = current.next;
             current.next = previous;
             previous = current;
             current = next;
